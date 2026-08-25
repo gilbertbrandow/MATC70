@@ -67,6 +67,8 @@ The voluntary assignments are optional, award no bonus, and are intended to prov
 
 The miniprojects are compulsory. The syllabus describes them as programming assignments, while the detailed programme calls them miniprojects.
 
+For Miniproject 1, this repository follows the Python version. See the [project description](mini_project_1/description.pdf) and [supplied test matrices](mini_project_1/testmatrices.py).
+
 ## Important dates
 
 - 2026-09-07 - Course begins at 08:15 in MA:3
@@ -104,7 +106,7 @@ Admission requires at least 67.5 credits in mathematics and numerical analysis, 
 
 - [PLAN.md](PLAN.md) - official weekly course plan and review list
 - [lectures/](lectures) - lecture slides, handwritten notes, and associated material
-- [assignments/](assignments) - voluntary assignments and mandatory miniproject material
+- [mini_project_1/](mini_project_1) - Miniproject 1 description, supplied Python test matrices, and eventual solution
 - [exams/](exams) - previous home examinations
 - [summary/](summary) - self-authored concise course summaries and LaTeX sources
 - [misc/](misc) - supplementary and official course material

@@ -48,7 +48,7 @@ Exercise numbers refer to Anders Holst and Victor Ufnarovski, Matrix Theory. Ref
 
 - [ ] Lecture: Chapter 13, singular values (3 November)
 - [ ] Lecture: Chapter 13, normal matrices, and Chapter 14, Hermitian forms (5 November)
-- [ ] Mandatory assignment: Miniproject 1 due (8 November)
+- [ ] Mandatory assignment: [Miniproject 1](mini_project_1/description.pdf) due (8 November)
 
 ## Week 47 (9-15 November 2026)
 
