@@ -67,7 +67,9 @@ The voluntary assignments are optional, award no bonus, and are intended to prov
 
 The miniprojects are compulsory. The syllabus describes them as programming assignments, while the detailed programme calls them miniprojects.
 
-For Miniproject 1, this repository follows the Python version. See the [project description](mini_project_1/description.pdf) and [supplied test matrices](mini_project_1/testmatrices.py).
+For Miniproject 1, this repository follows the Python version. See the [project description](project_1/description.pdf) and [supplied test matrices](project_1/testmatrices.py).
+
+Miniproject 2 uses Maple's LinearAlgebra package to investigate a matrix determined by the student's birthday. The finished Maple worksheet must be cleaned, exported as a PDF, and submitted through Canvas. See the [project description](project_2/description.pdf).
 
 ## Important dates
 
@@ -106,7 +108,8 @@ Admission requires at least 67.5 credits in mathematics and numerical analysis, 
 
 - [PLAN.md](PLAN.md) - official weekly course plan and review list
 - [lectures/](lectures) - lecture slides, handwritten notes, and associated material
-- [mini_project_1/](mini_project_1) - Miniproject 1 description, supplied Python test matrices, and eventual solution
+- [project_1/](project_1) - Miniproject 1 description, supplied Python test matrices, and eventual solution
+- [project_2/](project_2) - Miniproject 2 description and eventual exported Maple solution
 - [exams/](exams) - previous home examinations
 - [summary/](summary) - self-authored concise course summaries and LaTeX sources
 - [misc/](misc) - supplementary and official course material

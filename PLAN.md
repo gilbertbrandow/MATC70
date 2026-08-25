@@ -48,7 +48,7 @@ Exercise numbers refer to Anders Holst and Victor Ufnarovski, Matrix Theory. Ref
 
 - [ ] Lecture: Chapter 13, singular values (3 November)
 - [ ] Lecture: Chapter 13, normal matrices, and Chapter 14, Hermitian forms (5 November)
-- [ ] Mandatory assignment: [Miniproject 1](mini_project_1/description.pdf) due (8 November)
+- [ ] Mandatory assignment: [Miniproject 1](project_1/description.pdf) due (8 November)
 
 ## Week 47 (9-15 November 2026)
 
@@ -67,6 +67,6 @@ Exercise numbers refer to Anders Holst and Victor Ufnarovski, Matrix Theory. Ref
 
 - [ ] Lecture: Reserve and repetition (24 November; MATC70 and other 7.5-credit versions)
 - [ ] Exercises: 10.1-10.2 (26 November; MATC70 and other 7.5-credit versions)
-- [ ] Mandatory assignment: Miniproject 2 due (29 November)
+- [ ] Mandatory assignment: [Miniproject 2](project_2/description.pdf) due (29 November)
 
 # To Review
