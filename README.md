@@ -61,6 +61,8 @@ The [December 2024 home examination](exams/oldexamdec2024.pdf) is included as a 
 
 In that examination, students on a 7.5-credit course could submit solutions to at most seven of eight problems. Books and computer programs were permitted, but assistance from other people or chatbots was prohibited.
 
+The [January 2024 home examination](exams/tjan24.pdf) is used for the final scheduled lecture's exam-solving and repetition session.
+
 ## Assignments
 
 The voluntary assignments are optional, award no bonus, and are intended to provide feedback on written solutions and applications of the theory. Partial submissions are permitted.

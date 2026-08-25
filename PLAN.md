@@ -12,60 +12,60 @@ Exercise numbers refer to Anders Holst and Victor Ufnarovski, Matrix Theory. Ref
 
 ## Week 37 (7-13 September 2026)
 
-- [ ] Lecture: Chapter 1, notation, and Chapter 2, LU factorization (7 September, course start at 08:15 in MA:3)
-- [ ] Lecture: Chapter 3, determinants, multilinearity, and the adjugate (9 September)
+- [ ] Lecture: Chapter 1, notation, and Chapter 2, LU factorization ([slides](lectures/pres1.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919343)) (7 September, course start at 08:15 in MA:3)
+- [ ] Lecture: Chapter 3, determinants, multilinearity, and the adjugate ([slides](lectures/pres2.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919344)) (9 September)
 
 ## Week 38 (14-20 September 2026)
 
 - [ ] Exercises: 1.1-1.7, 1.10-1.11, 2.1-2.5, and 2.10-2.11 (14 September)
-- [ ] Lecture: Chapters 4-5, vector spaces and linear maps (16 September)
+- [ ] Lecture: Chapters 4-5, vector spaces and linear maps ([slides](lectures/pres3.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919345)) (16 September)
 - [ ] Exercises: 3.2-3.5, 3.7, 3.12-3.14, 4.1-4.7, 4.11-4.12, and [T.3](exams/oldexamdec2024.pdf) (17 September)
 
 ## Week 39 (21-27 September 2026)
 
-- [ ] Lecture: Chapters 6-7, spectral theory and the Jordan normal form for nilpotent matrices (21 September)
-- [ ] Lecture: Chapter 7, the general Jordan normal form (23 September)
+- [ ] Lecture: Chapters 6-7, spectral theory and the Jordan normal form for nilpotent matrices ([slides](lectures/pres4.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919346)) (21 September)
+- [ ] Lecture: Chapter 7, the general Jordan normal form ([slides](lectures/pres5.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919347)) (23 September)
 - [ ] Optional assignment: Voluntary Assignment 1 due (27 September)
 
 ## Week 40 (28 September-4 October 2026)
 
 - [ ] Exercises: 5.1-5.7, 6.1-6.10, and [T.1](exams/oldexamdec2024.pdf) (28 September)
-- [ ] Lecture: Chapter 8, the minimal polynomial (30 September)
+- [ ] Lecture: Chapter 8, the minimal polynomial ([slides](lectures/pres6.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919348)) (30 September)
 - [ ] Exercises: 7.1-7.12, 8.1-8.11, 8.15, [T.4](exams/oldexamdec2024.pdf), and [T.7](exams/oldexamdec2024.pdf) (1 October)
 
 ## Week 41 (5-11 October 2026)
 
-- [ ] Lecture: Chapter 9, functions of matrices (5 October)
-- [ ] Lecture: Chapter 11, norms (7 October)
+- [ ] Lecture: Chapter 9, functions of matrices ([slides](lectures/pres7.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919349)) (5 October)
+- [ ] Lecture: Chapter 11, norms ([slides](lectures/pres8.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919350)) (7 October)
 
 ## Week 42 (12-18 October 2026)
 
-- [ ] Lecture: Chapter 12, inner products (13 October)
+- [ ] Lecture: Chapter 12, inner products ([slides](lectures/pres9.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919351)) (13 October)
 - [ ] Exercises: 9.1-9.7, 11.1-11.9, 12.1-12.7, 12.9, 12.12, and [T.2](exams/oldexamdec2024.pdf) (15 October)
 - [ ] Optional assignment: Voluntary Assignment 2 due (18 October)
 
 ## Week 46 (2-8 November 2026)
 
-- [ ] Lecture: Chapter 13, singular values (3 November)
-- [ ] Lecture: Chapter 13, normal matrices, and Chapter 14, Hermitian forms (5 November)
+- [ ] Lecture: Chapter 13, singular values ([slides](lectures/pres10.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919352)) (3 November)
+- [ ] Lecture: Chapter 13, normal matrices, and Chapter 14, Hermitian forms ([slides](lectures/pres11.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919353)) (5 November)
 - [ ] Mandatory assignment: [Miniproject 1](project_1/description.pdf) due (8 November)
 
 ## Week 47 (9-15 November 2026)
 
-- [ ] Lecture: Chapter 14, congruent matrices (10 November)
-- [ ] Lecture: Chapter 15, pseudoinverses and least-squares problems (11 November)
+- [ ] Lecture: Chapter 14, congruent matrices ([slides](lectures/pres12.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919354)) (10 November)
+- [ ] Lecture: Chapter 15, pseudoinverses and least-squares problems ([slides](lectures/pres13.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919355)) (11 November)
 - [ ] Exercises: 13.1-13.6, 13.9-13.13, 13.16-13.18, 14.2-14.8, [T.5](exams/oldexamdec2024.pdf), and [T.6](exams/oldexamdec2024.pdf) (12 November)
 - [ ] Optional assignment: Voluntary Assignment 3 due (15 November)
 
 ## Week 48 (16-22 November 2026)
 
-- [ ] Lecture: Chapter 10, positive matrices (16 November; MATC70 and other 7.5-credit versions)
-- [ ] Lecture: Chapter 10, non-negative matrices (17 November; MATC70 and other 7.5-credit versions)
+- [ ] Lecture: Chapter 10, positive matrices ([slides](lectures/pres14.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919356)) (16 November; MATC70 and other 7.5-credit versions)
+- [ ] Lecture: Chapter 10, non-negative matrices ([slides](lectures/pres15.pdf), [Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919357)) (17 November; MATC70 and other 7.5-credit versions)
 - [ ] Exercises: [T.8](exams/oldexamdec2024.pdf) and 15.1-15.6 (19 November)
 
 ## Week 49 (23-29 November 2026)
 
-- [ ] Lecture: Reserve and repetition (24 November; MATC70 and other 7.5-credit versions)
+- [ ] Lecture: Solve and discuss the [January 2024 home examination](exams/tjan24.pdf) ([Canvas page](https://canvas.education.lu.se/courses/41761/modules/items/1919358)) (24 November; MATC70 and other 7.5-credit versions)
 - [ ] Exercises: 10.1-10.2 (26 November; MATC70 and other 7.5-credit versions)
 - [ ] Mandatory assignment: [Miniproject 2](project_2/description.pdf) due (29 November)
 
