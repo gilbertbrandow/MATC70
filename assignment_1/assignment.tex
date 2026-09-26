@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{amsthm}
+
+\title{Assignment 1, Matrix Theory}
+\author{Simon Gustafsson}
+\date{27 September 2026}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+
+\begin{document}
+\maketitle
+
+\section*{Exercise 1}
+
+\begin{proof}
+Let $x, y \in \mathcal{C}$ and $z = \lambda x + (1-\lambda)y$ for some $\lambda \in (0,1)$.
+
+\medskip
+\noindent $(\Rightarrow)$ Assume $a_i^T z = b_i$. By linearity,
+\[
+a_i^T z = a_i^T(\lambda x + (1-\lambda)y) = \lambda\, a_i^T x + (1-\lambda)\, a_i^T y = b_i.
+\]
+Since $x, y \in \mathcal{C}$, $a_i^T x \leq b_i$ and $a_i^T y \leq b_i$. 
+Suppose for contradiction that $a_i^T x < b_i$. Then, using $\lambda,(1 - \lambda) \in (0, 1)$,
+\[
+\lambda\, a_i^T x + (1-\lambda)\, a_i^T y < \lambda\, b_i + (1-\lambda)\, b_i = b_i,
+\]
+contradicting $a_i^T z = b_i$. Hence $a_i^T x = b_i$, with the same reasoning $a_i^T y = b_i$.
+
+\medskip
+\noindent $(\Leftarrow)$ Assume $a_i^T x = b_i$ and $a_i^T y = b_i$. Then $a_i^T z = \lambda\, a_i^T x + (1-\lambda)\, a_i^T y = \lambda\, b_i + (1-\lambda)\, b_i = b_i$.
+
+\end{proof}
+
+\end{document}
