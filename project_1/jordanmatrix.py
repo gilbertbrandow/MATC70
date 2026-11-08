@@ -17,13 +17,16 @@ def heltalsev(A, tol=0.0001):
     
     # If one of the distances exceeds our tolerance we raise an error
     if np.any(distances >= tol):
-        raise ValueError(f"not all eigenvalues are integers")
+        raise ValueError("not all eigenvalues are integers")
 
     return np.unique(rounded, return_counts=True)
 
 
 def jordanmatris(A, tol=0.00001):
     """Compute the Jordan normal form of a matrix A with integer eigenvalues.
+    
+    Returns the jordan matrix
+    Raises ValueError if some eigenvalue is not within tol of an integer.
     """
     ev, mult = heltalsev(A, tol)
     n = len(A)
@@ -44,10 +47,21 @@ def jordanmatris(A, tol=0.00001):
         while p[-1] < m and len(p) <= m:
             power = power @ B
             # Using rank-nullity theorem (5.12) we compute p_k=dim ker B^k=n-rank(B^k) 
-            p.append(n - np.linalg.matrix_rank(power, tol=tol))
+            p.append(n - np.linalg.matrix_rank(power))
+        
+        # p_k must reach m; if not, λ is not an exact eigenvalue (tol too large)
+        if p[-1] != m:
+            raise ValueError(f"dim Ker(A - {lam}I)^k never reached {m}")
 
+        # p_k can never exceed m, so once p_k = m we also have p_(k+1) = m.
+        # We add that value so at_least ends with 0, without it the largest block size would be lost.
         p.append(m)
+
+        # Theorem 7.9: p_k - p_(k-1) = n_k + n_(k+1) + ...
+        # at_least[k-1] = number of Jordan blocks of size >= k
         at_least = np.diff(p)
+
+        # (size >= k) - (size >= k+1) = n_k, the number of blocks of size exactly k.
         exactly = -np.diff(at_least)
 
         # for our fixed eigenvalue lambda, k is the size of the jordanblock and n_k the number of such blocks
