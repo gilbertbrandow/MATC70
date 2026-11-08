@@ -28,10 +28,10 @@ def jordanmatris(A, tol=0.00001):
     ev, mult = heltalsev(A, tol)
     n = len(A)
     I = np.eye(n)
-
-    # Instantiating the diagonal and superdiahonal that we will build by iterating over all the eigenvalues from above
-    diagonal, superdiag = [], []
     
+    # Create the empty jordan matrix to which we will append all the blocks
+    J = np.zeros((0, 0), dtype=int)
+
     # Looping over all eigenvalues and multiplicites
     for lam, m in zip(ev, mult):
         B = A - lam * I
@@ -50,12 +50,15 @@ def jordanmatris(A, tol=0.00001):
         at_least = np.diff(p)
         exactly = -np.diff(at_least)
 
+        # for our fixed eigenvalue lambda, k is the size of the jordanblock and n_k the number of such blocks
         for k, n_k in enumerate(exactly, start=1):
+            # Create the jordanblock of size k for our eigenvalue lambda
+            jordanblock_k = lam * np.eye(k, dtype=int) + np.eye(k, k=1, dtype=int)
             for _ in range(n_k):
-                diagonal += [lam] * k
-                superdiag += [1] * (k - 1) + [0]
+                # append the jordanblock_k n_k times to our jordan matrix J
+                J = scipy.linalg.block_diag(J, jordanblock_k)
 
-    return np.diag(diagonal) + np.diag(superdiag[:-1], k=1)
+    return J
 
 
 def main():
