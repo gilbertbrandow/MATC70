@@ -14,7 +14,9 @@ def heltalsev(A, tol=0.0001):
     values = np.linalg.eigvals(A)
     rounded = np.round(values.real).astype(int)
     distances = np.abs(values - rounded)
-    
+
+    # tol < 0.001 rejects testmatrix(6). Fails for big Jordan blocks (testmatrix(3))
+
     # If one of the distances exceeds our tolerance we raise an error
     if np.any(distances >= tol):
         raise ValueError("not all eigenvalues are integers")
@@ -28,6 +30,7 @@ def jordanmatris(A, tol=0.00001):
     Returns the jordan matrix
     Raises ValueError if some eigenvalue is not within tol of an integer.
     """
+    # Same tol as in heltalsev; pass a larger tol for big Jordan blocks.
     ev, mult = heltalsev(A, tol)
     n = len(A)
     I = np.eye(n)
@@ -49,7 +52,7 @@ def jordanmatris(A, tol=0.00001):
             # Using rank-nullity theorem (5.12) we compute p_k=dim ker B^k=n-rank(B^k) 
             p.append(n - np.linalg.matrix_rank(power))
         
-        # p_k must reach m; if not, λ is not an exact eigenvalue (tol too large)
+        # p_k must reach m; if not, λ is not an exact eigenvalue
         if p[-1] != m:
             raise ValueError(f"dim Ker(A - {lam}I)^k never reached {m}")
 
