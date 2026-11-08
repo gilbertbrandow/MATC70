@@ -8,14 +8,18 @@ from testmatrices import testmatrix
 def heltalsev(A, tol=0.0001):
     """Decide if the matrix A has integer eigenvalues.
     
+    tol < 0.001 rejects testmatrix(6). Fails for big Jordan blocks (testmatrix(3))
+    
     Returns (eigenvalues, multiplicities)
     Raises ValueError if some eigenvalue is not within tol of an integer.
     """
     values = np.linalg.eigvals(A)
-    rounded = np.round(values.real).astype(int)
+    # Round real and imaginary parts, so Gaussian integers are accepted
+    rounded = np.round(values)
     distances = np.abs(values - rounded)
-
-    # tol < 0.001 rejects testmatrix(6). Fails for big Jordan blocks (testmatrix(3))
+    # Plain integers when every eigenvalue is real
+    if np.all(rounded.imag == 0):
+        rounded = rounded.real.astype(int)
 
     # If one of the distances exceeds our tolerance we raise an error
     if np.any(distances >= tol):
@@ -27,10 +31,11 @@ def heltalsev(A, tol=0.0001):
 def jordanmatris(A, tol=0.00001):
     """Compute the Jordan normal form of a matrix A with integer eigenvalues.
     
+    Same tol as in heltalsev; pass a larger tol for big Jordan blocks.
+    
     Returns the jordan matrix
     Raises ValueError if some eigenvalue is not within tol of an integer.
     """
-    # Same tol as in heltalsev; pass a larger tol for big Jordan blocks.
     ev, mult = heltalsev(A, tol)
     n = len(A)
     I = np.eye(n)
