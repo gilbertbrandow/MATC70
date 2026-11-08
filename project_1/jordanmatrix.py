@@ -22,46 +22,34 @@ def heltalsev(A, tol=0.0001):
     return np.unique(rounded, return_counts=True)
 
 
-def jordan_matrix(A, tol=0.00001):
+def jordanmatris(A, tol=0.00001):
     """Compute the Jordan normal form of a matrix A with integer eigenvalues.
-
-    Uses Theorem 7.9: for an eigenvalue λ, let p_k = dim Ker(A - λI)^k and
-    n_k = number of Jordan blocks J_k(λ) of size k. Then
-
-        p_1 = n_1 +  n_2 +  n_3 + ...
-        p_2 = n_1 + 2n_2 + 2n_3 + ...
-        p_3 = n_1 + 2n_2 + 3n_3 + ...
-
-    Subtracting consecutive equations gives p_k - p_(k-1) = n_k + n_(k+1) + ...
-    (the number of blocks of size >= k), and subtracting once more gives
-
-        n_k = 2p_k - p_(k-1) - p_(k+1),   with p_0 = 0.
     """
     ev, mult = heltalsev(A, tol)
-    A = np.array(A, dtype=float)
     n = A.shape[0]
     I = np.eye(n)
 
     blocks = []
-    for eigenvalue, m in zip(ev, mult):
-        if m == 1:
-            blocks.append(np.array([[eigenvalue]]))
-            continue
+    for lam, m in zip(ev, mult):
+        B = A - lam * I
 
-        B = A - eigenvalue * I
         p = [0]
         power = I
         while p[-1] < m and len(p) <= m:
             power = power @ B
-            p.append(scipy.linalg.null_space(power).shape[1])
-        p.append(p[-1])  # p_(k+1) = p_k once the kernel is complete
+            p.append(n - np.linalg.matrix_rank(power, tol=tol))
+        if p[-1] != m:
+            raise ValueError(f"kernel dimensions for eigenvalue {lam} never "
+                             f"reached the multiplicity {m}: p = {p}")
+        p.append(m)
+        at_least = np.diff(p)
+        exactly = -np.diff(at_least)
 
-        for k in range(1, len(p) - 1):
-            n_k = 2 * p[k] - p[k - 1] - p[k + 1]
-            block = eigenvalue * np.eye(k, dtype=int) + np.eye(k, k=1, dtype=int)
-            blocks.extend([block] * n_k)
+        for k, n_k in enumerate(exactly, start=1):
+            J_k = lam * np.eye(k, dtype=int) + np.eye(k, k=1, dtype=int)
+            blocks.extend([J_k] * n_k)
 
-    return scipy.linalg.block_diag(*blocks)
+    return scipy.linalg.block_diag(blocks)
 
 
 def main():
@@ -69,7 +57,7 @@ def main():
         A = testmatrix(i)
         try:
             print(f"testmatrix({i}):")
-            print(jordan_matrix(A))
+            print(jordanmatris(A))
         except ValueError as e:
             print(f"  {e}")
 
